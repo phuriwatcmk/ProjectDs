@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ProjectDD</string>
+    <string name="title_activity_main2_page2">Main2_page2</string>
+    <string name="title_activity_page3">page3</string>
+
+    <string name="facebook_app_id">1983747371933390</string> <string name="fb_login_protocol_scheme">fb1983747371933390</string>
+</resources>

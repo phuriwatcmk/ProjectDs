@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "1060749613477",
+    "firebase_url": "https://haruesanproject1.firebaseio.com",
+    "project_id": "haruesanproject1",
+    "storage_bucket": "haruesanproject1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060749613477:android:196e67aff8f8f7af",
+        "android_client_info": {
+          "package_name": "com.project.harue.projectdd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060749613477-q87q2setbenghu5k92vgqtjhr1drk1tt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.harue.projectdd",
+            "certificate_hash": "cbadb3687df9ccf14c31184a1d011d3ad8dfdaf1"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoK-5mtretpHMC_zWpSAVFbXtuIaBKUXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060749613477-bi94nju7ndnknlg6f5ai9l9gvt9li7rd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
