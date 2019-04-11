@@ -62,6 +62,9 @@ public class page3 extends AppCompatActivity {
 
     DatePickerDialog.OnDateSetListener mdate;
 
+    String dateid;
+    String curtimeid;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +81,8 @@ public class page3 extends AppCompatActivity {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         String currentDateandTime = sdf.format(currentTime);
         Log.e("tag", currentDateandTime);
+
+        curtimeid = currentDateandTime;
 
         dateStart.setText("Start: " + currentDateandTime);
         dateStop.setOnClickListener(new View.OnClickListener() {
@@ -108,12 +113,19 @@ public class page3 extends AppCompatActivity {
                     new_mount = ""+month;
                 }
                 dateStop.setText("Stop: " + dayOfMonth + "/" + new_mount + "/" + year);
+
+                dateid = dateStop.getText().toString();
             }
         };
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SubHomeActivity.class);
+                intent.putExtra("priceid", price.getText().toString());
+                intent.putExtra("dateid", dateid);
+                intent.putExtra("curdateid", curtimeid);
+                startActivity(intent);
                 if (!namename.getText().toString().equals("") && !price.getText().toString().equals("") && pickedImgUri != null) {
                     addimagefirebase();
                 } else {
@@ -203,7 +215,9 @@ public class page3 extends AppCompatActivity {
                                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                     Contener contener = new Contener(imageDownlaodLink,
                                             namename.getText().toString(),
-                                            price.getText().toString());
+                                            price.getText().toString(),
+                                            curtimeid,
+                                            dateid.replace("Stop: ", ""));
 
                                     tofirebase(contener);
 

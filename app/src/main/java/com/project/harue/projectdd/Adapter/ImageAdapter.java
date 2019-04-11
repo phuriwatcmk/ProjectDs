@@ -1,6 +1,7 @@
 package com.project.harue.projectdd.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.project.harue.projectdd.Model.Contener;
 import com.project.harue.projectdd.R;
+import com.project.harue.projectdd.SubHomeActivity;
 
 import java.util.List;
 
@@ -42,7 +44,12 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.MyViewHolder
         holder.imageurl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, contener.getName_object(),Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(mContext, SubHomeActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("imgurl", contener.getImgurl());
+                intent.putExtra("priceid", contener.getPrice_object());
+                intent.putExtra("dateid", contener.getDate_object());
+                intent.putExtra("curdateid", contener.getCurdate_object());
+                mContext.startActivity(intent);
             }
         });
 
