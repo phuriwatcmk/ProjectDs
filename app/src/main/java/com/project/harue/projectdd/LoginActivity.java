@@ -1,5 +1,6 @@
 package com.project.harue.projectdd;
 
+
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
